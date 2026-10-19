@@ -45,6 +45,9 @@ h1,h2,h3{color:#111827;font-weight:850}
 .hero-carousel #employerToggle,.hero-carousel #jobseekerToggle{transition:background-color .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease}.hero-carousel #employerToggle,.hero-carousel #jobseekerToggle{background:#e60000;color:#fff}.hero-carousel #employerToggle:hover,.hero-carousel #jobseekerToggle:hover{background:#bd0000;color:#fff;transform:translateY(-3px);box-shadow:0 12px 24px #14243a45}.hero-carousel .actions .btn:focus-visible{outline:3px solid #e9aa55;outline-offset:3px}@media(prefers-reduced-motion:reduce){.hero-carousel #employerToggle,.hero-carousel #jobseekerToggle{transition:none}}.hero-carousel .actions #employerToggle,.hero-carousel .actions #jobseekerToggle,.nav .nav-wa{background:#16834d;color:#fff}.hero-carousel .actions #employerToggle:hover,.hero-carousel .actions #jobseekerToggle:hover,.nav .nav-wa:hover{background:#0f6b3d;color:#fff}</style>
 <style id="responsive-crop-fixes">
 @media(max-width:760px){
+  .job-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .job-card .btn.primary{background:var(--green);color:#fff}
+  .job-card .btn.primary:hover{background:#0f6b3d;color:#fff}
   .shell{padding-left:12px;padding-right:12px}
   .topbar{width:100%;height:72px;gap:8px;padding:0 12px}
   .brand{min-width:0;gap:7px!important}
@@ -68,6 +71,7 @@ h1,h2,h3{color:#111827;font-weight:850}
   .footer-brand-lockup img{width:54px;height:50px}
 }
 @media(max-width:380px){
+  .job-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .brand-name{font-size:11px!important}
   .nav .nav-wa{padding:7px 9px;font-size:11px}
   .hero-carousel h1{font-size:30px}
