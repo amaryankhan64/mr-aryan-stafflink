@@ -23,12 +23,15 @@
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init','1755159895589977');
     fbq('track','PageView');
+    const formType=new URLSearchParams(window.location.search).get('form')==='employer'?'employer':'candidate';
+    const leadName=formType==='employer'?'Employer Staff Request':'Candidate Job Application';
     try{
-      if(!sessionStorage.getItem('stafflink_candidate_lead_sent')){
-        sessionStorage.setItem('stafflink_candidate_lead_sent','1');
-        fbq('track','Lead',{content_name:'Candidate Job Application',content_category:'StaffLink form'});
+      const eventKey='stafflink_lead_sent_'+formType;
+      if(!sessionStorage.getItem(eventKey)){
+        sessionStorage.setItem(eventKey,'1');
+        fbq('track','Lead',{content_name:leadName,content_category:'StaffLink form'});
       }
-    }catch(e){fbq('track','Lead',{content_name:'Candidate Job Application',content_category:'StaffLink form'});}
+    }catch(e){fbq('track','Lead',{content_name:leadName,content_category:'StaffLink form'});}
   </script>
 </head>
 <body>
