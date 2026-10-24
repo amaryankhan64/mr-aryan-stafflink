@@ -16,8 +16,11 @@
     .check{margin:0 auto 18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#e5f6ee;color:var(--green);font-size:30px;font-weight:800}
     h1{margin:0 0 10px;font-size:clamp(28px,6vw,38px);line-height:1.15}
     p{margin:0 auto 24px;max-width:460px;color:var(--muted);font-size:18px}
+    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
     a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--green);color:#fff;text-decoration:none;font-weight:750}
     a:hover{background:#00734b}
+    a.secondary{background:#eef4f7;color:var(--navy);border:1px solid #dce5eb}
+    a.secondary:hover{background:#e4edf2}
   </style>
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -32,6 +35,7 @@
         fbq('track','Lead',{content_name:leadName,content_category:'StaffLink form'});
       }
     }catch(e){fbq('track','Lead',{content_name:leadName,content_category:'StaffLink form'});}
+    document.addEventListener('DOMContentLoaded',function(){const chat=document.getElementById('whatsappLink');if(chat)chat.addEventListener('click',function(){fbq('track','Contact',{content_name:'Post-submission WhatsApp',content_category:'WhatsApp'});});});
   </script>
 </head>
 <body>
@@ -41,7 +45,7 @@
     <div class="check" aria-hidden="true">✓</div>
     <h1>Application received</h1>
     <p>Thank you for applying. Our team will review your details and contact you about suitable job opportunities.</p>
-    <a href="/">Back to website</a>
+    <div class="actions"><a id="whatsappLink" href="https://wa.me/919350512763">Chat with us on WhatsApp</a><a class="secondary" href="/">Back to website</a></div>
   </main>
 </body>
 </html>
