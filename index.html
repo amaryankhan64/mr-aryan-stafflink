@@ -88,8 +88,7 @@ h1,h2,h3{color:#111827;font-weight:850}
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1755159895589977');
 fbq('track','PageView');
-document.addEventListener('click',function(e){var a=e.target.closest('a,button,[role="button"],input[type="submit"]');if(!a)return;var n=(a.innerText||a.getAttribute('aria-label')||a.value||'Website action').trim().slice(0,100),h=a.href||'';if(h.includes('wa.me')||/whatsapp/i.test(n))fbq('track','Contact',{content_name:n,content_category:'WhatsApp'});else if(h.includes('tally.so')||/apply|request staff|hire staff/i.test(n))fbq('track','Lead',{content_name:n,content_category:'Staff enquiry'});else fbq('trackCustom','StaffLinkClick',{content_name:n,destination:h||'On-page action'})},true);
-document.addEventListener('submit',function(){fbq('track','Lead',{content_name:'StaffLink form submitted',content_category:'Website form'})},true);
+document.addEventListener('click',function(e){var a=e.target.closest('a,button,[role="button"],input[type="submit"]');if(!a)return;var n=(a.innerText||a.getAttribute('aria-label')||a.value||'Website action').trim().slice(0,100),h=a.href||'';if(h.includes('wa.me')||/whatsapp/i.test(n))fbq('track','Contact',{content_name:n,content_category:'WhatsApp'});else fbq('trackCustom','StaffLinkClick',{content_name:n,destination:h||'On-page action'})},true);
 </script>
 <!-- End Meta Pixel Code -->
 </head><body>
