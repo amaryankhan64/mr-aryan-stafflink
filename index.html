@@ -169,6 +169,16 @@ document.addEventListener('click',function(e){var a=e.target.closest('a,button,[
 .founder-info .socials .social-link svg{width:20px;height:20px}
 @media(max-width:760px){.founder-card{border-radius:20px}.portrait{aspect-ratio:4/3;min-height:0}.portrait-photo{width:100%;height:100%;object-fit:contain;object-position:center;background:#3a1e2a}.founder-info{padding:22px 20px 24px}.founder-info h2{font-size:27px}.founder-info>p{font-size:14px;line-height:1.6}.founder-stats div{padding:10px}.founder-stats strong{font-size:19px}.founder-info .socials .social-link{width:40px;height:40px}}
 </style>
+<style id="support-card-category-backdrops">
+/* Very light, category-specific work imagery adds context without competing with card copy. */
+#support .support-card:before{content:"";position:absolute;z-index:-1;top:0;right:0;bottom:0;width:62%;height:auto;border-radius:inherit;background-position:right center;background-repeat:no-repeat;background-size:auto 118%;opacity:.16;mask-image:linear-gradient(90deg,transparent 0%,#000 38%);pointer-events:none}
+#support .category-hotels:before{background-image:url('home-hotels-restaurants-cutout.png')}
+#support .category-mall:before{background-image:url('home-mall-retail-cutout.png')}
+#support .category-warehouse:before{background-image:url('home-warehouse-cutout.png')}
+#support .category-baby-care:before{background-image:url('home-baby-care-cutout.png')}
+#support .social-marketing-card:before{width:43%;opacity:.12;background-size:auto 90%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 150' fill='none'%3E%3Cpath d='M30 120h165M48 112V82h24v30m22 0V58h24v54m22 0V34h24v78' stroke='%23f8e8d5' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m47 65 40-17 30 10 48-34m0 0h-27m27 0v25' stroke='%23f8e8d5' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+@media(max-width:760px){#support .support-card:before{width:55%;background-size:auto 110%;opacity:.13}#support .social-marketing-card:before{width:40%;opacity:.1}}
+</style>
 </head><body>
 <div class="shell"><header class="topbar"><div class="brand"><img class="brand-logo" src="mr-aryan-stafflink-logo-option4.svg" alt="MR ARYAN STAFFLINK logo"></div><nav class="nav"><button onclick="go('home')">Home</button><a href="#about" onclick="go('home')">About</a><a href="#contact" onclick="go('home')">Contact</a><button class="nav-wa" onclick="whatsappNotice()">WhatsApp Us</button></nav></header></div>
 <main id="homeView">
