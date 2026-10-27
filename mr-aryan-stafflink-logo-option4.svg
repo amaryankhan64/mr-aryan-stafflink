@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="title desc">
+  <title id="title">MR ARYAN STAFFLINK</title>
+  <desc id="desc">Red A and navy S monogram above the MR ARYAN STAFFLINK wordmark.</desc>
+  <path fill="#102748" d="M156 39h126l-15 23h-99c-14 0-22 7-22 19s8 19 22 19h48c35 0 54 17 54 47s-21 49-55 49H113l15-24h84c18 0 28-8 28-24s-10-23-27-23h-48c-34 0-53-18-53-46s18-40 44-40Z"/>
+  <path fill="#f01820" fill-rule="evenodd" d="M42 198 121 48c7-14 19-14 27 0l79 150h-34l-59-111-59 111H42Zm57-41h72l-36-67-36 67Z"/>
+  <path fill="#fff" d="m134 93 34 64h-68l34-64Z"/>
+  <text x="180" y="253" fill="#102748" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900" letter-spacing="-1.4" text-anchor="middle">MR ARYAN</text>
+  <path d="M37 284h66M257 284h66" stroke="#f01820" stroke-width="2.5"/>
+  <text x="180" y="292" fill="#f01820" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing="5.2" text-anchor="middle">STAFFLINK</text>
+</svg>
