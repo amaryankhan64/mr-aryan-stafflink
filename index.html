@@ -180,14 +180,18 @@ document.addEventListener('click',function(e){var a=e.target.closest('a,button,[
 @media(max-width:760px){#support .support-card:before{width:55%;background-size:auto 110%;opacity:.13}#support .social-marketing-card:before{width:40%;opacity:.1}}
 </style>
 <style id="stafflink-motion-system">
-@keyframes stafflink-fade-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes stafflink-intro{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 #categoryHero .hero-copy{animation:stafflink-intro .65s cubic-bezier(.2,.7,.25,1) both}
-#categoryHero .actions .btn{flex-direction:row;align-items:center;justify-content:flex-start;gap:9px;padding:7px 13px}\n#categoryHero .button-icon{width:29px;height:29px;flex:0 0 29px;display:grid;place-items:center;border-radius:9px;background:#ffffff20;color:currentColor}\n#categoryHero .button-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}\n#categoryHero .button-copy{display:flex;min-width:0;flex-direction:column;gap:1px}\n#categoryHero .actions .btn{position:relative;isolation:isolate;overflow:hidden;transition:transform .24s ease,box-shadow .24s ease}
+#categoryHero .actions .btn{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:10px;width:auto;max-width:none;min-width:0;flex:1 1 0;height:62px;min-height:54px;padding:8px 14px;text-align:left;line-height:1.15;position:relative;isolation:isolate;overflow:hidden;transition:transform .24s ease,box-shadow .24s ease}
 #categoryHero .actions .btn:before{content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(105deg,#066b47,#07945b 48%,#087a91);transform:translateX(-102%);transition:transform .42s cubic-bezier(.2,.75,.25,1);pointer-events:none}
 #categoryHero .actions .btn:hover:before,#categoryHero .actions .btn:focus-visible:before{transform:translateX(0)}
 #categoryHero .actions .btn:hover{transform:translateY(-2px)}
 #categoryHero .actions .btn>*{position:relative;z-index:1}
+#categoryHero .button-icon{width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center;border:1px solid #ffffff72;border-radius:9px;background:#ffffff20;color:#fff}
+#categoryHero .button-icon svg{display:block;width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#categoryHero .button-copy{display:flex;min-width:0;flex:1 1 auto;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px}
+#categoryHero .button-kicker{display:block;font-size:9px;line-height:1.15;white-space:nowrap;letter-spacing:.06em}
+#categoryHero .button-label{display:block;font-size:14px;line-height:1.2;font-weight:850;white-space:normal}
 #support .support-card{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
 #videoSection .video-tile{transition:transform .24s ease,box-shadow .24s ease}
 #videoSection .video-tile:hover{transform:translateY(-3px);box-shadow:0 9px 22px #10263d25}
@@ -195,7 +199,21 @@ document.addEventListener('click',function(e){var a=e.target.closest('a,button,[
  body.stafflink-motion-ready .stafflink-motion-reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.25,1);transition-delay:var(--stafflink-motion-delay,0ms)}
  body.stafflink-motion-ready .stafflink-motion-reveal.stafflink-motion-visible{opacity:1;transform:translateY(0)}
 }
-@media(max-width:760px){#categoryHero .actions .btn{gap:7px;padding:7px 9px;min-height:54px;height:auto}#categoryHero .button-icon{width:25px;height:25px;flex-basis:25px}#categoryHero .button-icon svg{width:19px;height:19px}#categoryHero .button-label{font-size:12px;white-space:normal}}\n@media(prefers-reduced-motion:reduce){
+@media(max-width:760px){
+ #categoryHero .actions{display:flex;flex-wrap:nowrap;gap:9px}
+ #categoryHero .actions .btn{height:auto;min-height:56px;padding:7px 9px;gap:7px}
+ #categoryHero .button-icon{width:27px;height:27px;flex-basis:27px}
+ #categoryHero .button-icon svg{width:20px;height:20px}
+ #categoryHero .button-kicker{font-size:8px;letter-spacing:.03em}
+ #categoryHero .button-label{font-size:12px;line-height:1.15}
+}
+@media(max-width:350px){
+ #categoryHero .actions .btn{padding:7px 6px;gap:5px}
+ #categoryHero .button-icon{width:24px;height:24px;flex-basis:24px}
+ #categoryHero .button-icon svg{width:18px;height:18px}
+ #categoryHero .button-label{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
  #categoryHero .hero-copy{animation:none}
  #categoryHero .actions .btn,#support .support-card,#videoSection .video-tile{transition:none}
  #categoryHero .actions .btn:before{transition:none}
