@@ -91,6 +91,22 @@ fbq('track','PageView');
 document.addEventListener('click',function(e){var a=e.target.closest('a,button,[role="button"],input[type="submit"]');if(!a)return;var n=(a.innerText||a.getAttribute('aria-label')||a.value||'Website action').trim().slice(0,100),h=a.href||'';if(h.includes('wa.me')||/whatsapp/i.test(n))fbq('track','Contact',{content_name:n,content_category:'WhatsApp'});else fbq('trackCustom','StaffLinkClick',{content_name:n,destination:h||'On-page action'})},true);
 </script>
 <!-- End Meta Pixel Code -->
+<style id="hero-cta-lime-hover">
+/* Larger hero actions with a left-to-right lime hover fill. */
+.hero-carousel .actions{gap:18px}
+.hero-carousel .actions .btn{position:relative;isolation:isolate;overflow:hidden;z-index:0;width:258px;height:68px;max-width:100%;padding:9px 18px;border:1px solid #ffffff40;border-radius:16px;transition:transform .24s ease,box-shadow .24s ease}
+.hero-carousel .actions #employerToggle{background:linear-gradient(110deg,#087b4b,#10935c,#087f73);color:#fff}
+.hero-carousel .actions #jobseekerToggle{background:linear-gradient(110deg,#07894f,#0b8868,#086b84);color:#fff}
+.hero-carousel .actions .btn::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:#4d7c0f;transform:scaleX(0);transform-origin:left center;transition:transform .42s cubic-bezier(.2,.75,.25,1)}
+.hero-carousel .actions .btn:hover::before,.hero-carousel .actions .btn:focus-visible::before,.hero-carousel .actions .btn:active::before{transform:scaleX(1)}
+.hero-carousel .actions .btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #14243a35}
+.hero-carousel .button-kicker,.hero-carousel .button-label{position:relative;z-index:2;white-space:nowrap}
+.hero-carousel .button-label{font-size:15px}
+.hero-carousel .actions .btn:focus-visible{outline:3px solid #4d7c0f;outline-offset:4px}
+@media(max-width:760px){.hero-carousel .actions{gap:12px}.hero-carousel .actions .btn{width:auto;max-width:none;min-width:0;flex:1 1 0;height:66px;padding:9px 12px}.hero-carousel .button-label{font-size:12px}}
+@media(max-width:360px){.hero-carousel .actions .btn{padding-inline:8px}.hero-carousel .button-label{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.hero-carousel .actions .btn,.hero-carousel .actions .btn::before{transition:none}}
+</style>
 </head><body>
 <div class="shell"><header class="topbar"><div class="brand"><img class="brand-logo" src="mr-aryan-stafflink-circle-logo.png" alt="Mr Aryan StaffLink circular logo"><strong class="brand-name">MR ARYAN STAFFLINK</strong></div><nav class="nav"><button onclick="go('home')">Home</button><a href="#about" onclick="go('home')">About</a><a href="#contact" onclick="go('home')">Contact</a><button class="nav-wa" onclick="whatsappNotice()">WhatsApp Us</button></nav></header></div>
 <main id="homeView">
