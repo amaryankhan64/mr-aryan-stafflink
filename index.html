@@ -114,6 +114,13 @@ document.addEventListener('click',function(e){var a=e.target.closest('a,button,[
 @media(max-width:760px){.topbar{height:auto;min-height:110px;padding-block:5px}.brand-logo{width:118px;height:105px}.nav{gap:6px}.nav .nav-wa{padding:9px 10px}.footer-brand-lockup img{width:128px;height:114px}}
 @media(max-width:390px){.topbar{min-height:100px;gap:5px;padding-left:8px;padding-right:8px}.brand-logo{width:105px;height:94px;flex:0 0 105px}.brand{gap:0}.nav .nav-wa{padding:8px;font-size:11px}}
 </style>
+<style id="option6-transparent-header">
+/* Option 6: transparent logo on a light white-to-aqua header. */
+.topbar{background:linear-gradient(115deg,#fff 0%,#e9f6f7 62%,#d9eff0 100%);border:1px solid #c8e0e2;border-bottom:1px solid #c8e0e2;border-radius:16px;box-shadow:0 6px 18px #1027480b}
+.topbar .brand-logo{background:transparent!important;padding:0!important;box-shadow:none!important;border-radius:0!important}
+.topbar .nav a,.topbar .nav button:not(.nav-wa){color:#102748}
+.topbar .nav a:hover,.topbar .nav button:not(.nav-wa):hover{color:#087f83}
+</style>
 </head><body>
 <div class="shell"><header class="topbar"><div class="brand"><img class="brand-logo" src="mr-aryan-stafflink-logo-option4.svg" alt="MR ARYAN STAFFLINK logo"></div><nav class="nav"><button onclick="go('home')">Home</button><a href="#about" onclick="go('home')">About</a><a href="#contact" onclick="go('home')">Contact</a><button class="nav-wa" onclick="whatsappNotice()">WhatsApp Us</button></nav></header></div>
 <main id="homeView">
