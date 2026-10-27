@@ -121,6 +121,13 @@ document.addEventListener('click',function(e){var a=e.target.closest('a,button,[
 .topbar .nav a,.topbar .nav button:not(.nav-wa){color:#102748}
 .topbar .nav a:hover,.topbar .nav button:not(.nav-wa):hover{color:#087f83}
 </style>
+<style id="option6-header-logo-size">
+/* Keep the header slim while making the transparent full logo easy to read. */
+.topbar{height:94px;min-height:94px;padding-top:4px;padding-bottom:4px}
+.topbar .brand-logo{width:128px!important;height:84px!important;object-fit:contain;padding:0!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;flex:0 0 128px}
+@media(max-width:760px){.topbar{height:88px!important;min-height:88px!important;padding-top:3px!important;padding-bottom:3px!important}.topbar .brand-logo{width:116px!important;height:80px!important;flex:0 0 116px!important}}
+@media(max-width:390px){.topbar{height:84px!important;min-height:84px!important}.topbar .brand-logo{width:108px!important;height:76px!important;flex:0 0 108px!important}}
+</style>
 </head><body>
 <div class="shell"><header class="topbar"><div class="brand"><img class="brand-logo" src="mr-aryan-stafflink-logo-option4.svg" alt="MR ARYAN STAFFLINK logo"></div><nav class="nav"><button onclick="go('home')">Home</button><a href="#about" onclick="go('home')">About</a><a href="#contact" onclick="go('home')">Contact</a><button class="nav-wa" onclick="whatsappNotice()">WhatsApp Us</button></nav></header></div>
 <main id="homeView">
